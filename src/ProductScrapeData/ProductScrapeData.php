@@ -37,7 +37,7 @@ class ProductScrapeData
     /**
      * @return discountPer[]. Calculate discount percentage based on price and saving value. Returns an array of discount percentage.
      */
-    public function calculateDiscount($savings, $prices, $subscriptions)
+    private function calculateDiscount($savings, $prices, $subscriptions)
     {
        $saving_count = count($savings); 
        $discountPer = [];
@@ -59,7 +59,7 @@ class ProductScrapeData
     /**
      * @return amount a float value.
      */
-    public function strtoFloat($params)
+    private function strtoFloat($params)
     {
         $amount = [];
         foreach($params AS $param)
@@ -72,7 +72,7 @@ class ProductScrapeData
     /**
      * @return subscription[] month or year string Returns an array with values [month,year]
      */
-    public function checkSubscriptionOption($options){
+    private function checkSubscriptionOption($options){
     
         if(!empty($options)){
             foreach($options AS $option){
