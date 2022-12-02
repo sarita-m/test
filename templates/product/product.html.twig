@@ -1,0 +1,23 @@
+
+<table >
+    <tr><td cellspacing=5 >Products</td></tr>
+    <tr>
+        
+        <td>Option title</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Discount %</td>
+        <td>Annual cost</td>
+    </tr>
+    {% for i, product in package  %}
+    
+        <tr>
+            <td>{{product[0].getTitle()}}</td>
+            <td>{{product[0].getDescription()}}</td>
+            <td>{{product[0].getPrice()}}</td>
+             <td>{{product[0].getDiscount()}}</td>
+            <td>{{product.annual_price}}</td>
+            
+        </tr>
+    {% endfor %}
+</table>
