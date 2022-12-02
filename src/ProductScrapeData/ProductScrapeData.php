@@ -11,7 +11,6 @@ class ProductScrapeData
     public function __construct(ProductInterface $pInterface)
     {
         $this->pInterface = $pInterface;
-        
     }
 
     /**
